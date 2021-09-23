@@ -63,6 +63,10 @@ function confirmSelection() {
   // let fullCharList = possibleChars.toString()
 };
 
+//Prompt for length of password from user input and store in variable
+//Convert array of possible characters to string 
+//Calculate length of string and get random indexes
+
 confirmSelection();
 
 let random = ""
@@ -90,23 +94,51 @@ console.log("this is the position index: " + position);
 let character = finalpossstring.charAt(position);
 console.log("this is the character at position:" + character);
 
-function possCharLen() {
-  console.log(possibleChars.length)
-  String(possibleChars)
-  console.log(possibleChars)
-  console.log(typeof possibleChars)
-};
-possCharLen();
-
 console.log("include" + possibleChars)
+
+//TODO:Based on code above run a for loop to iterate thru length of password and generate and store values of random indexes.
+
+
+//TODO: iterate through a string
+let randomIndex = [];
+var myStringArray = ["Hello","World"];
+var arrayLength = myStringArray.length;
+for (var i = 0; i < random; i++) {
+    console.log(finalpossstring[i]);
+    //TODO:Do something - generate a random index number - generates errors still
+    randomIndex.push(Math.floor(Math.random() * (posscharlength)))
+    console.log("this is the random index: " + randomIndex)
+    }
+    // randInx();
+    //TODO:Do something - get character at position random in finalpossstring
+    //TODO:push to an array
+
+console.log(randomIndex);
+let plassword = []
+randomIndex.forEach(element => console.log(finalpossstring[element]));
+randomIndex.forEach(element => plassword.push(finalpossstring[element]));
+console.log(plassword);
+let duck = plassword.toString();
+console.log(typeof duck);
+console.log(duck + " again");
+console.log(duck.charAt([2]));
+let bird = duck.replaceAll(",", "");
+console.log(bird + " again");
+//var result = plassword.replace(",", "1");
+// let p = password;
+// let jj = p.replace(",", "red");
+// console.log(jj + " yet again");
 
 // let fullCharList = possibleChars.toString();
 console.log("you're possible characters are : " + possibleChars);
 
+
+
+
 //from class Joe
-function generatePassword() {
-  return "password"
-};
+// function generatePassword() {
+//   return bird
+// };
 
 // Write password to the #password input
 function writePassword() {
@@ -116,7 +148,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+document.getElementById("password").textContent = bird
 // Add event listener to generate button
 generateBtn.addEventListener("click", confirmSelection);
 //generateBtn.addEventListener("click", writePassword);
